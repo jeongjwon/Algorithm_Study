@@ -1,5 +1,5 @@
 ## 6장 문자열 조작
-- [O] (Easy) [유효한 팰린드롬](https://leetcode.com/problems/valid-palindrome/)
+- [O] (Easy) [유효한 팰린드롬](https://leetcode.com/problems/valid-palindrome/) 
 - [X] (Easy) [문자열 뒤집기](https://leetcode.com/problems/reverse-string/)
 - [X] (Easy) [로그 파일 재정렬](https://leetcode.com/problems/reorder-data-in-log-files/)
 - [O] (Easy) [가장 흔한 단어](https://leetcode.com/problems/most-common-word/)
