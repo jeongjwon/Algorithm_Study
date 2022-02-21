@@ -17,4 +17,15 @@ public static ListNode reverseList(ListNode head) {
     	}
     	
     	return res.next;
+        
+        //iterative
+        ListNode newNode = null;
+        
+        while(head != null){
+            ListNode next = head.next;
+            head.next = newNode;
+            newNode = head;
+            head = next;
+        }
+        return newNode;
     }
