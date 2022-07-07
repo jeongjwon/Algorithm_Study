@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.*; 
 
 public class Programmers_rankSearch {
     // Step 1 : info 를 이용하여 hashmap(모든 조건이 가능하게끔)을 만든다
