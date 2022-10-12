@@ -39,8 +39,8 @@ public class Programmers_baseStationInstallation {
         while (location <= n) {
             if (idx < stations.length && location >= stations[idx] - w) {
                 //기지국 안의 범위에 들어왔을 때는 location을 다음으로 넘겨줌
-                idx++;
                 location = stations[idx] + w + 1;
+                idx++;
             } else {
                 //기지국 밖의 범위에 들어왔을 때는 location을 2w+1 만큼 거리를 벌어주고 
                 //기지국을 설치함 (==answer++)
