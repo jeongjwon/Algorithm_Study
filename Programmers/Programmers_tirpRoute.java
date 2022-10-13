@@ -1,3 +1,37 @@
+ import java.util.*;
+class Solution {
+    static ArrayList<String> allPath;
+    static Queue<String> queue = new PriorityQueue<>();
+    static boolean[] visited;
+    public void dfs(String dep, String path, String[][] tickets, int depth){
+        if(depth == tickets.length){
+            //allPath.add(path);
+            queue.add(path);
+            return;
+        }
+        for(int i = 0 ; i < tickets.length ; i++){
+            if(!visited[i] && dep.equals(tickets[i][0])){
+                visited[i] = true;
+                dfs(tickets[i][1], path+ " "+tickets[i][1], tickets, depth+1);
+                visited[i] = false;
+            }
+        }
+    }
+    public String[] solution(String[][] tickets) {
+        String[] answer = {};
+        
+        visited = new boolean[tickets.length];
+        allPath = new ArrayList<>();
+        
+        dfs("ICN", "ICN", tickets, 0);
+        
+        // Collections.sort(allPath);
+        // answer = allPath.get(0).split(" ");
+        answer = queue.peek().split(" ");
+        
+        return answer;
+    }
+}
  // String[] answer = new String[tickets.length + 1];
         // HashMap<String, ArrayList<String>> hm = new HashMap<>();
 
