@@ -70,9 +70,66 @@ public class Programmers_trackConstruction {
 
     public static int solution(int[][] board) {
         
-        dfs(board);
+        //dfs(board);
+        //return min;
+         public static int solution(int[][] board) {
+        
+        
+        //상하좌우 -> 좌표와 코딩의 행렬에 있어서 y좌표는 
+        int[] dx = { 0,0,-1,1 };
+        int[] dy = { -1,1,0,0 };
+       
+        int n = board.length;
+        
+       
+        int[][][] cost = new int[n][n][4];//각 방향으로 온 것을 표시
 
-        return min;
+        for(int i = 0 ; i < n ; i++){
+            for(int j = 0 ; j < n ; j++){
+                cost[i][j][0] = Integer.MAX_VALUE;
+                cost[i][j][1] = Integer.MAX_VALUE;
+                cost[i][j][2] = Integer.MAX_VALUE;
+                cost[i][j][3] = Integer.MAX_VALUE;
+                // Arrays.fill(cost[i][j] , Integer.MAX_VALUE);
+            }
+        }
+
+        Queue<int[]> queue = new LinkedList<>();
+        //첫 시작점은 우 하로 갈 수 있음
+        
+        queue.add(new int[] { 0,0,1,0});//하
+        queue.add(new int[] { 0,0,3,0});//우
+        
+        
+        
+        while(!queue.isEmpty()){
+            int[] r = queue.poll();
+            //x,y,dir,price
+            for(int d = 0 ;d < 4; d++){
+
+                int curX = r[0]+ dx[d];
+                int curY = r[1] + dy[d];
+
+                int curPrice = r[3] + ((d == r[2]) ? 100 : 600);
+                
+                if(curX < 0 || curY < 0 || curX >= n || curY >= n || board[curX][curY] == 1 || cost[curX][curY][d] <= curPrice) continue;
+                
+                //curPrice 가 더 작을 경우에만
+                cost[curX][curY][d] = curPrice;
+                queue.add(new int[] {curX, curY, d, curPrice});
+            }
+
+           
+        }
+
+        int answer = Integer.MAX_VALUE;
+
+        for(int i = 0 ; i < 4; i++){
+            answer = (answer > cost[n-1][n-1][i]  ? cost[n-1][n-1][i] : answer);
+        }
+        return answer;
+
+    }
 
     }
 
