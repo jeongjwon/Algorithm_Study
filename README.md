@@ -1,6 +1,10 @@
-# Algorithm_Study
+# 👩🏻‍💻 Algorithm_Study
+- 하루에 한 문제 이상씩 풀고, 블로깅하기
+- <a href="https://github.com/onlybooks/algorithm-interview">파이썬 알고리즘 인터뷰</a> 커리큘럼을 따른다.
 
-#### __*curicculum*__
+</br>
+
+#### 📜  __*curicculum*__
  1. 문자열 조작 (string)
  2. 배열 (Array, List)
  3. 연결리스트 (Linked List)
@@ -16,3 +20,11 @@
  13. 분할 정복 (Divide and Conquer)
  14. 다이나믹 프로그래밍 (Dynamic Programming)
  15. Game Theory
+ 
+</br>
+
+#### 📍 __*reference site*__
+- Baekjoon
+- LeetCode
+- programmers
+- SW Expert Academy
