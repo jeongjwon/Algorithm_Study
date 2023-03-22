@@ -1,3 +1,4 @@
+import java.util.*;
 public class Leetcode_496_NextGreaterElement {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         Stack<Integer> stack = new Stack<>();

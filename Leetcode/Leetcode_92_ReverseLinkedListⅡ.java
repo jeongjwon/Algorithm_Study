@@ -1,4 +1,5 @@
-    public static ListNode reverseBetween(ListNode head, int left, int right) {
+public class Leetcode_92_ReverseLinkedListⅡ{
+	public  ListNode reverseBetween(ListNode head, int left, int right) {
     	if(left == right || head == null) return head;
     	//List
 ////    	List<Integer> list = new ArrayList<>();
@@ -55,3 +56,4 @@
     	return root.next;
     	
     }
+}

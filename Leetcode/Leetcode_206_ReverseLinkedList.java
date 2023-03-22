@@ -1,15 +1,14 @@
 import java.util.*;
 
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode() {}
- *     ListNode(int val) { this.val = val; }
- *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
+// Definition for singly-linked list.
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode() {}
+    ListNode(int val) { this.val = val; }
+    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+}
+
 
 public class Leetcode_206_ReverseLinkedList{
 	public ListNode reverseList(ListNode head) {
@@ -31,7 +30,7 @@ public class Leetcode_206_ReverseLinkedList{
     		answer = answer.next;
     	}
     	
-    	return res.next;
+    	// return res.next;
         
         //iterative
         ListNode newNode = null;

@@ -1,3 +1,4 @@
+import java.util.*;
 class ListNode {
      int val;
      ListNode next;
@@ -5,7 +6,7 @@ class ListNode {
      ListNode(int val) { this.val = val; this.next = null; }
      ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
-public class LeetCode234_Palindrome_Linked_List {
+public class Leetcode_234_PalindromeLinkedList {
 
     public static boolean isPalindrome(ListNode head) {
 
