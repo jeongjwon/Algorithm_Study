@@ -37,6 +37,7 @@ class Leetcode_21_MergeTwoSortedLists {
         
         //recrusive method
         if(l1 == null) {
+			
 			return l2;
 		}
     	if(l2 == null){

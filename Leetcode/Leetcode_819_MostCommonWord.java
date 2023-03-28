@@ -3,18 +3,22 @@ public class Leetcode_819_MostCommonWord {
     public static String mostCommonWord(String paragraph, String[] banned) {
         
         //banned 는 소문자로만 이루어져있으므로 비교를 쉽게 하기 위해 paragraph 도 소문자로 변경
-        paragraph = paragraph.toLowerCase(); 
-        //banned 는 영어로만 이루어져있으므로  공백, ! ? ; , ; .  제거
-        String regex = "[^a-z ]";
-        paragraph = paragraph.replaceAll(regex, " ");
-        //banned 한 문자열 제거
-        for(String ban : banned){
-            paragraph = paragraph.replaceAll(ban, " ");
-        }
-        
+        // paragraph = paragraph.toLowerCase(); 
+        // //banned 는 영어로만 이루어져있으므로  공백, ! ? ; , ; .  제거
+        // String regex = "[^a-z ]";
+        // paragraph = paragraph.replaceAll(regex, " ");
+        // //banned 한 문자열 제거
+        // for(String ban : banned){
+        //     paragraph = paragraph.replaceAll(ban, " ");
+        // }
+        paragraph = paragraph.toLowerCase();
+paragraph = paragraph.replaceAll("[!?',;.]", " ");
+paragraph = paragraph.replaceAll("\\s+", " ");
         System.out.println(paragraph);
         //띄어쓰기를 기준으로 split
         String[] words = paragraph.split(" ");
+        
+        for(String word : words) System.out.println("\\"+word+"\\");
 
         HashMap<String, Integer> hashmap = new HashMap<>();
 
