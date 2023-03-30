@@ -46,10 +46,11 @@ public class Leetcode_92_ReverseLinkedListⅡ{
     	for(int i = 0 ; i < left-1 ; i++) {
     		start = start.next;
     	}
-    	ListNode end = start.next;
+    	ListNode end = start.next;//3 4 5
     	for(int i = 0 ; i < right - left ; i++) {
+			// 2
     		ListNode temp = start.next;
-    		start.next = end.next;
+    		start.next = end.next; 
     		end.next = end.next.next;
     		start.next.next = temp;
     	}

@@ -1,29 +1,40 @@
 public class Leetcode_92_Reverse_Linked_List_II {
     public static ListNode reverseBetween(ListNode head, int left, int right) {
-        int count = 1;
+        
         ListNode start = head;
         ListNode result = start;
-        while(count < left){
+
+        //start : left 전까지의 노드
+       for(int i = 0 ; i < left-1 ;i++){
             start = start.next;
-            count++;
         }
 
-        ListNode reverse = start.next;
-        start.next = reverse;
-
+    //start 2
+        
+        
         ListNode newNode = null;
+        // start.next = newNode;
+        
+        for(int i = 0 ; i <= right-left ; i++){
+            ListNode next = start.next;// 
+            start.next = newNode;//2 -> null // 3-> 2-> null
+            newNode = start; //2 null// 
+            start = next; //3 4 5
+           
 
-		while (head != null) {
-			ListNode next = head.next;
-			head.next = newNode;
-			newNode = head;
-			head = next;
-		}
-		return newNode;
-        while(count < right){
-            ListNode next = 
         }
+        
+        ListNode end = start;
+        result.next = newNode;
+
+        while(newNode.next!=null){
+            newNode = newNode.next;
+        }
+        newNode.next = end;
+       
         return result;
+     
+        
     }
     public static void main(String[] args) {
 
