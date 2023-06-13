@@ -1,4 +1,4 @@
-public class LeetCode_148_Sort_List {
+public class Leetcode_148_Sort_List {
     public static ListNode sortList(ListNode head) {
         if(head == null || head.next == null) return head;
 
